@@ -22,8 +22,9 @@
 #include <config.h>
 #endif
 
+#include <sys/types.h>
 #include <sys/mman.h>
-#include <string.h>
+#include <cstring>
 #include "RingBuffer.hpp"
 
 RingBuffer::~RingBuffer ()
