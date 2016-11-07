@@ -67,18 +67,18 @@ IMPLEMENT_APP(FTapp)
 
 static const wxCmdLineEntryDesc cmdLineDesc[] =
 {
-	{ wxCMD_LINE_SWITCH, wxT("h"), wxT("help"), wxT("show this help"), wxCMD_LINE_VAL_NONE, wxCMD_LINE_OPTION_HELP },
-	{ wxCMD_LINE_OPTION, wxT("c"), wxT("channels"), wxT("# processing channels (1-4) default is 2"), wxCMD_LINE_VAL_NUMBER },
-	{ wxCMD_LINE_OPTION, wxT("i"), wxT("inputs"),
-	  wxT("connect inputs from these jack ports (separate each channel with commas).\n")
+	{ wxCMD_LINE_SWITCH, wxT_2("h"), wxT_2("help"), wxT_2("show this help"), wxCMD_LINE_VAL_NONE, wxCMD_LINE_OPTION_HELP },
+	{ wxCMD_LINE_OPTION, wxT_2("c"), wxT_2("channels"), wxT_2("# processing channels (1-4) default is 2"), wxCMD_LINE_VAL_NUMBER },
+	{ wxCMD_LINE_OPTION, wxT_2("i"), wxT_2("inputs"),
+	  wxT_2("connect inputs from these jack ports (separate each channel with commas).\n")
 	      "\t\t\tDefaults to 'alsa_pcm:capture_1,..." },
-	{ wxCMD_LINE_OPTION, wxT("o"), wxT("outputs"),
-	  wxT("connect outputs to these jack ports (separate each channel with commas).\n")
+	{ wxCMD_LINE_OPTION, wxT_2("o"), wxT_2("outputs"),
+	  wxT_2("connect outputs to these jack ports (separate each channel with commas).\n")
 	      "\t\t\tDefaults to 'alsa_pcm:playback_1,...'" },
-	{ wxCMD_LINE_OPTION, wxT("n"), wxT("jack-name"), wxT("jack name.   default is freqtweak_1")},
-	{ wxCMD_LINE_OPTION, wxT("S"), wxT("jack-server"), wxT("jack server name")},
-	{ wxCMD_LINE_OPTION, wxT("p"), wxT("preset"), wxT("load given preset initially")},
-	{ wxCMD_LINE_OPTION, wxT("r"), wxT("rc-dir"), wxT("what directory to use for run-control state. default is ~/.freqtweak")},
+	{ wxCMD_LINE_OPTION, wxT_2("n"), wxT_2("jack-name"), wxT_2("jack name.   default is freqtweak_1")},
+	{ wxCMD_LINE_OPTION, wxT_2("S"), wxT_2("jack-server"), wxT_2("jack server name")},
+	{ wxCMD_LINE_OPTION, wxT_2("p"), wxT_2("preset"), wxT_2("load given preset initially")},
+	{ wxCMD_LINE_OPTION, wxT_2("r"), wxT_2("rc-dir"), wxT_2("what directory to use for run-control state. default is ~/.freqtweak")},
 	{ wxCMD_LINE_NONE }
 };	
 
@@ -221,7 +221,7 @@ bool FTapp::OnInit()
 	
 	// use stderr as log
 	wxLog *logger=new wxLogStderr();
-	logger->SetTimestamp(NULL);
+	logger->SetTimestamp(wxEmptyString);
 	wxLog::SetActiveTarget(logger);
 	
 	wxCmdLineParser parser(argc, argv);
