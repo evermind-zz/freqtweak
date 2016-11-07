@@ -133,7 +133,7 @@ Defaults to 'alsa_pcm:playback_1,...'
 Jack name. Default is freqtweak_1.
 .TP
 .B \-D <str>, \-\-tmpdir=<str>
-Jack server tmp directory (should match jackd --tmpdir).
+Jack server tmp directory (should match jackd \-\-tmpdir).
 .TP
 .B \-p <str>, \-\-preset=<str>
 Load the given preset initially.
@@ -149,7 +149,6 @@ patchbay:
 
 Start freqtweak first with this command line:
 
-.T
 .B freqtweak -n ft &
 
 Then start alsaplayer like so: 
