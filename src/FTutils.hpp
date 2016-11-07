@@ -23,6 +23,7 @@
 #include <iostream>
 #include <sstream>
 #include <cmath>
+#include <stdint.h>
 
 #include <wx/string.h>
 
